@@ -1,8 +1,8 @@
 " XXX Go App Engine SDK comes with its own Go environment which we need to use
 " for all Go sources, otherwise 'appengine/*' imports cause compile errors.
 " Here is the deal, we must disable the default go checker and/or make
-" appengine checker th default one, but Syntastic API doesn't provide a clean
-" method for such purposes.  hence we need to resort to the following hack.
+" appengine checker the default one, but Syntastic API doesn't provide a clean
+" method for such purposes.  Hence we need to resort to the following hack.
 
 if exists('g:loaded_syntastic_go_appengine_checker')
     if !exists('g:syntastic_go_checkers') || empty(g:syntastic_go_checkers)
