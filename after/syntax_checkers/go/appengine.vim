@@ -4,14 +4,8 @@
 " appengine checker the default one, but Syntastic API doesn't provide a clean
 " method for such purposes.  Hence we need to resort to the following hack.
 
-" No need for this hack if appengine is not available
-for checker in g:SyntasticRegistry.Instance().availableCheckersFor(&ft)
-    if checker.getName() == 'appengine'
-        let s:appengine_available = 1
-        break
-    endif
-endfor
-if !exists('s:appengine_available')
+" No need for this hack if appengine is not available.
+if empty(g:SyntasticRegistry.Instance().getCheckers(&ft, ['appengine']))
     finish
 endif
 
