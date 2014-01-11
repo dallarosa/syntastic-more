@@ -19,7 +19,7 @@
 "
 "             g:syntastic_go_appengine_full_build - Compile all Go sources
 "             with go-app-builder, a more through check at the cost of longer
-"             compile time. Example:
+"             compile time.
 "
 "             Example:
 "             :let g:syntastic_go_appengine_full_build = 1
